@@ -5,21 +5,17 @@ class CreateAsset extends Component {
     state = {
         asset: {
             name: '',
-            quantity: 0, // Initialize quantity as an integer
-            // Add other properties as needed
+            quantity: 0,
         },
     };
 
     handleSubmit = (e) => {
         e.preventDefault();
-        // Send a POST request to the backend to create a new asset
         axios.post('http://localhost:8080/api/v1/asset', this.state.asset)
             .then(response => {
-                // Handle the response (e.g., show a success message or redirect)
                 console.log('Asset created:', response.data);
             })
             .catch(error => {
-                // Handle errors (e.g., display an error message)
                 console.error('Error creating asset:', error);
             });
     };
@@ -30,7 +26,6 @@ class CreateAsset extends Component {
             asset: {
                 ...prevState.asset,
                 [name]: name === 'quantity' ? parseInt(value, 10) : value,
-                // Parse quantity as an integer
             }
         }));
     };
