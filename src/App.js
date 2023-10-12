@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import heImage from './images/he-image.png';
+import demo from './images/demo.jpg';
 import './App.css';
+import React from 'react';
+import CreateAsset from './components/CreateAsset';
+import GetAsset from './components/GetAsset';
+import GetAllAssets from './components/GetAllAssets';
+import UpdateAsset from './components/UpdateAsset';
+import DeleteAsset from './components/DeleteAsset';
+import CenterAndAlignComponent from "./components/CenterAndAlignComponent";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <img src={heImage} alt="heImage" />
+          <img src={demo} alt="demo" />
       </header>
+
+      <CenterAndAlignComponent />
     </div>
   );
 }
